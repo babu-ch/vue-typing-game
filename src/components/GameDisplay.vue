@@ -1,13 +1,16 @@
 <template>
     <div class="gameDisplay">
-        display
-        {{c}}
+        <health-bar></health-bar>
     </div>
 </template>
 
 <script>
+  import HealthBar from './parts/HealthBar'
   export default {
     name: 'GameDisplay',
+    components: {
+      HealthBar
+    },
     data() {
       return {
         c: this.$store.state.count
