@@ -9,14 +9,14 @@
     name: 'HealthBar',
     data() {
       return {
-        c: this.$store.state.count,
+        c: this.$store.state.health,
         style: {
           width: 0,
         }
       }
     },
     mounted() {
-      const health = this.$store.state.count
+      const health = this.$store.state.health
       this.style.width = (health * 20) + 'px'
     }
 
