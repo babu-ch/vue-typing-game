@@ -1,12 +1,18 @@
 <template>
     <div class="gameDisplay">
         display
+        {{c}}
     </div>
 </template>
 
 <script>
   export default {
     name: 'GameDisplay',
+    data() {
+      return {
+        c: this.$store.state.count
+      }
+    }
   }
 </script>
 
