@@ -11,6 +11,19 @@ export default {
   name: 'app',
   components: {
     GameDisplay
+  },
+  mounted() {
+    window.addEventListener('keydown', (event)  => {
+      // If down arrow was pressed...
+      if (event.keyCode == 40) {
+        vm.$broadcast('down-arrow-pressed');
+      }
+    });
+  },
+  methods {
+    keydown(code) {
+
+    }
   }
 }
 </script>

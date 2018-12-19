@@ -1,15 +1,18 @@
 <template>
     <div class="gameDisplay">
         <health-bar></health-bar>
+        <strings></strings>
     </div>
 </template>
 
 <script>
   import HealthBar from './parts/HealthBar'
+  import Strings from './parts/Strings'
   export default {
     name: 'GameDisplay',
     components: {
-      HealthBar
+      HealthBar,
+      Strings
     },
     data() {
       return {
