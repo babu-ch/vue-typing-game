@@ -24,6 +24,10 @@
       this.start()
     },
     methods: {
+      restart() {
+        this.width = 100
+        this.start()
+      },
       start() {
         this.interval = setInterval(() => {
           this.width -= 1
