@@ -1,17 +1,37 @@
 <template>
   <div id="app">
-      <game-display></game-display>
+      <component v-bind:is="currentComponent"></component>
   </div>
 </template>
 
 <script>
 import GameDisplay from './components/GameDisplay'
+import GameEndDisplay from './components/GameEndDisplay'
 
 export default {
   name: 'app',
   components: {
-    GameDisplay
+    GameDisplay,
+    GameEndDisplay
   },
+  data() {
+    return {
+      currentComponent: GameDisplay
+    }
+  },
+  computed: {
+    isDied() {
+        return this.$store.state.isDied
+    }
+  },
+  watch: {
+    isDied() {
+      if (!this.isDied) {
+        return
+      }
+      this.currentComponent = GameEndDisplay
+    }
+  }
 }
 </script>
 

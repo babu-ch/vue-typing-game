@@ -58,6 +58,7 @@
         }
         this.width = 0
         clearInterval(this.interval)
+        this.$store.commit('die')
       },
       restart() {
         this.width = 100
@@ -65,7 +66,6 @@
         this.start()
       },
       start() {
-        console.log(this.$store.state.interval)
         this.interval = setInterval(() => {
           this.width--
           this.checkTimeOver()
