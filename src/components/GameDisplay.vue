@@ -1,5 +1,5 @@
 <template>
-    <div class="gameDisplay">
+    <div class="gameDisplay" :style="style" :class="klass">
         <time-bar></time-bar>
         <display-string></display-string>
         <strings></strings>
@@ -20,6 +20,21 @@
     },
     data() {
       return {
+        style: {},
+        klass: []
+      }
+    },
+    computed: {
+      missCount() {
+        return this.$store.state.missCount
+      }
+    },
+    watch: {
+      missCount() {
+        this.klass = ['damaged']
+        setTimeout(() => {
+          this.klass = []
+        }, 200)
       }
     }
   }
@@ -32,5 +47,20 @@
         border: 1px solid #CCC;
         margin: auto;
         position: relative;
+    }
+
+    .damaged {
+        animation: damage;
+        animation-duration: .2s;
+    }
+
+    @keyframes damage {
+        0% {
+            background : #CCC;
+            opacity: 0.1;
+        }
+        100% {
+            background : #FFF;
+        }
     }
 </style>
