@@ -30,7 +30,7 @@
           if (this.width < 1) {
             clearInterval(this.interval)
           }
-        }, 50);
+        }, this.$store.state.interval);
       },
     }
   }

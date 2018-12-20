@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    baseTime: 5000,
+    interval: 60,
     strings: [],
     displayString: '',
     inputStrings: inputStrings,
