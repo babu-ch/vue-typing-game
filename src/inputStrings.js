@@ -33,5 +33,7 @@ export default [
   {displayString:'腹痛のため遅れます', inputString:'fukutsuunotameokuremasu'},
   {displayString:'午前休でお願いします', inputString:'gozenkyuudeonegaishimasu'},
   {displayString:'全休でお願いします', inputString:'zenkyuudeonegaishimasu'},
+  {displayString:'なんで動いてるんだろう', inputString:'nandeugoiterundarou'},
+  {displayString:'例外は握り潰せ', inputString:'reigaihanigiritsubuse'},
 ]
 
