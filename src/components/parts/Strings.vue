@@ -60,7 +60,7 @@
           if (this.$store.state.interval < 20) {
             this.$store.commit('decrementInterval', 1);
           } else {
-            this.$store.commit('decrementInterval', 10);
+            this.$store.commit('decrementInterval', 5);
           }
         }
       }
