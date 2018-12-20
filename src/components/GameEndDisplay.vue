@@ -2,6 +2,7 @@
     <div class="gameDisplay">
         <h1>Game End</h1>
         <p>Success Stages: {{successStage}}</p>
+        <button @click="gameStart">Retry</button>
     </div>
 </template>
 
@@ -12,6 +13,11 @@
     computed: {
       successStage() {
         return this.$store.state.successStage
+      }
+    },
+    methods: {
+      gameStart() {
+        this.$emit('game-start')
       }
     }
   }

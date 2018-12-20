@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <component v-bind:is="currentComponent"></component>
+      <component v-bind:is="currentComponent" v-on:game-start="gameStart"></component>
   </div>
 </template>
 
@@ -30,6 +30,12 @@ export default {
         return
       }
       this.currentComponent = GameEndDisplay
+    }
+  },
+  methods: {
+    gameStart() {
+      this.$store.commit('resetAll')
+      this.currentComponent = GameDisplay
     }
   }
 }
