@@ -28,5 +28,10 @@ export default [
   {displayString:'商流が深い', inputString:'shouryuugafukai'},
   {displayString:'年金', inputString:'nenkin'},
   {displayString:'非正規雇用', inputString:'hiseikikoyou'},
+  {displayString:'セグフォしてますね', inputString:'segufoshitemasune'},
+  {displayString:'コアダンプ読みますか', inputString:'koadanpuyomimasuka'},
+  {displayString:'腹痛のため遅れます', inputString:'fukutsuunotameokuremasu'},
+  {displayString:'午前休でお願いします', inputString:'gozenkyuudeonegaishimasu'},
+  {displayString:'全休でお願いします', inputString:'zenkyuudeonegaishimasu'},
 ]
 
