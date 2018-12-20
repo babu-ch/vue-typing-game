@@ -1,6 +1,7 @@
 <template>
     <div class="gameDisplay">
         <health-bar></health-bar>
+        <display-string></display-string>
         <strings></strings>
     </div>
 </template>
@@ -8,15 +9,17 @@
 <script>
   import HealthBar from './parts/HealthBar'
   import Strings from './parts/Strings'
+  import DisplayString from './parts/DisplayString'
+
   export default {
     name: 'GameDisplay',
     components: {
       HealthBar,
-      Strings
+      Strings,
+      DisplayString
     },
     data() {
       return {
-        c: this.$store.state.count
       }
     }
   }

@@ -12,6 +12,10 @@ export default {
   components: {
     GameDisplay
   },
+  data() {
+    return {
+    }
+  },
   mounted() {
     window.addEventListener('keydown', (event)  => {
         this.keyDown(event.key)

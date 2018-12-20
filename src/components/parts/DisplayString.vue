@@ -1,17 +1,17 @@
 <template>
     <div :style="style">
-        {{currentString}}
+        {{string}}
     </div>
 </template>
 
 <script>
   export default {
-    name: 'Strings',
+    name: 'DisplayString',
     data() {
       return {
-        currentString: this.$store.state.currentString.join(''),
         style: {
-        }
+        },
+        string: this.$store.state.displayString
       }
     },
   }
@@ -20,6 +20,6 @@
 <style scoped lang="scss">
     div {
         font-size: 60px;
-        margin-top: 20px;
+        margin-top: 70px;
     }
 </style>
