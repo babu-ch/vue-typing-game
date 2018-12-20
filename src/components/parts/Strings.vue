@@ -1,6 +1,6 @@
 <template>
     <div :style="style">
-        {{currentString}}
+        {{string}}
     </div>
 </template>
 
@@ -9,11 +9,16 @@
     name: 'Strings',
     data() {
       return {
-        currentString: this.$store.state.currentString.join(''),
+        currentString: this.$store.state.currentString,
         style: {
         }
       }
     },
+    computed: {
+      string() {
+        return this.currentString.join('')
+      }
+    }
   }
 </script>
 

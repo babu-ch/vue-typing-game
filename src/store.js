@@ -7,11 +7,13 @@ export default new Vuex.Store({
   state: {
     health: 10,
     strings: 'This is Test',
-    currentString: 'thisistest'.split(''),
+    currentString: ['t','h','i','s'],
     displayString: 'ディスイズテスト',
   },
   mutations: {
-    increment(state) {
+    charHit(state) {
+      state.currentString.shift()
+      console.log(state.currentString)
     }
   }
 })

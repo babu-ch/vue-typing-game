@@ -14,6 +14,12 @@ export default {
   },
   data() {
     return {
+      currentString: this.$store.state.currentString
+    }
+  },
+  computed: {
+    firstChar() {
+      return this.currentString[0]
     }
   },
   mounted() {
@@ -23,7 +29,10 @@ export default {
   },
   methods: {
     keyDown(code) {
-        console.log(code)
+      if (code !== this.firstChar) {
+        return false;
+      }
+      this.$store.commit('charHit')
     }
   }
 }
