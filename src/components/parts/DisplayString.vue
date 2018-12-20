@@ -1,6 +1,6 @@
 <template>
     <div :style="style">
-        {{string}}
+        <span v-for="(char, i) in string" :key="i">{{char}}</span>
     </div>
 </template>
 
@@ -15,7 +15,7 @@
     },
     computed: {
       string() {
-        return this.$store.state.displayString
+        return this.$store.state.displayString.split('')
       }
     }
   }
@@ -23,10 +23,10 @@
 
 <style scoped lang="scss">
     div {
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-
         font-size: 50px;
         margin-top: 70px;
         text-align: center;
+    }
+    span {
     }
 </style>
