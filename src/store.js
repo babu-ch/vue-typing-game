@@ -1,17 +1,19 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import inputStrings from './inputStrings'
-
+import {_} from 'vue-underscore'
 
 Vue.use(Vuex)
+
+const shuffleStrings = _.shuffle(inputStrings)
 
 export default new Vuex.Store({
   state: {
     interval: 60,
     strings: [],
     displayString: '',
-    inputStrings: inputStrings,
-    inputStringsBase: inputStrings.concat(),
+    inputStrings: shuffleStrings,
+    inputStringsBase: shuffleStrings.concat(),
     missCount: 0,
     typeSuccessCount: 0,
     successStage: 0,
