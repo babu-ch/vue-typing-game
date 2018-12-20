@@ -13,5 +13,6 @@ export default [
   {displayString:'何もしてないのにこわれた', inputString:'nanimoshitenainonikowareta'},
   {displayString:'まほうで動いている', inputString:'mahoudeugoiteiru'},
   {displayString:'転職してラッパーになる', inputString:'tenshokushiterappa-ninaru'},
+  {displayString:'単価を上げてください', inputString:'tankawoagetekudasai'},
 ]
 
