@@ -11,7 +11,11 @@ export default new Vuex.Store({
     strings: [],
     displayString: '',
     inputStrings: inputStrings,
-    inputStringsBase: inputStrings
+    inputStringsBase: inputStrings,
+    missCount: 0,
+    typeSuccessCount: 0,
+    successStage: 0,
+    isDied: false
   },
   mutations: {
     choice(state) {
@@ -23,5 +27,17 @@ export default new Vuex.Store({
       state.displayString = mondai.displayString
       state.strings = mondai.inputString.split('')
     },
+    typeMiss(state) {
+      state.missCount++
+    },
+    typeSuccess(state) {
+      state.typeSuccessCount++
+    },
+    stageSuccess(state) {
+      state.successStage++
+    },
+    die(state) {
+      state.isDied = true
+    }
   }
 })

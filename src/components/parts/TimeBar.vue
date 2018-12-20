@@ -18,22 +18,46 @@
         return {
           width: this.width + '%'
         }
+      },
+      missCount() {
+        return this.$store.state.missCount
+      },
+      typeSuccessCount() {
+        return this.$store.state.typeSuccessCount
+      }
+    },
+    watch: {
+      missCount() {
+        this.width -= 10
+        this.checkTimeOver()
+      },
+      typeSuccessCount() {
+        if (99 < this.width + 5) {
+          this.width = 100
+          return
+        }
+        this.width += 5;
       }
     },
     mounted() {
       this.start()
     },
     methods: {
+      checkTimeOver() {
+        if (this.width > 0) {
+          return
+        }
+        this.width = 0
+        clearInterval(this.interval)
+      },
       restart() {
         this.width = 100
         this.start()
       },
       start() {
         this.interval = setInterval(() => {
-          this.width -= 1
-          if (this.width < 1) {
-            clearInterval(this.interval)
-          }
+          this.width--
+          this.checkTimeOver()
         }, this.$store.state.interval);
       },
     }
