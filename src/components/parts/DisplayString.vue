@@ -1,6 +1,6 @@
 <template>
     <div :style="style">
-        <fuwa-moji v-for="(char, i) in string" :key="i" :char="char"></fuwa-moji>
+        <fuwa-moji v-for="(char, i) in string" :key="i" :char="char" :index="i"></fuwa-moji>
     </div>
 </template>
 
@@ -28,8 +28,10 @@
 <style scoped lang="scss">
     div {
         font-size: 50px;
-        margin-top: 70px;
+        margin: 70px auto 0 auto;
         text-align: center;
+        position: relative;
+        display: table;
     }
 
 </style>
