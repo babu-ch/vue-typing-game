@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    health: 10,
+    baseTime: 5000,
     strings: [],
     displayString: '',
     inputStrings: inputStrings,
@@ -23,8 +23,5 @@ export default new Vuex.Store({
       state.displayString = mondai.displayString
       state.strings = mondai.inputString.split('')
     },
-    relativeUpdateHealth(state, num) {
-      state.health += num
-    }
   }
 })

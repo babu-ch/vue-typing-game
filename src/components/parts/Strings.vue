@@ -35,7 +35,7 @@
       keyDown(code) {
         const string = this.currentString
         if (code !== string[0]) {
-          this.$store.commit('relativeUpdateHealth', -1)
+          // this.$store.commit('relativeUpdateHealth', -1)
           return false;
         }
         string.shift()

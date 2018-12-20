@@ -1,22 +1,22 @@
 <template>
     <div class="gameDisplay">
-        <health-bar></health-bar>
+        <time-bar></time-bar>
         <display-string></display-string>
         <strings></strings>
     </div>
 </template>
 
 <script>
-  import HealthBar from './parts/HealthBar'
   import Strings from './parts/Strings'
   import DisplayString from './parts/DisplayString'
+  import TimeBar from './parts/TimeBar'
 
   export default {
     name: 'GameDisplay',
     components: {
-      HealthBar,
       Strings,
-      DisplayString
+      DisplayString,
+      TimeBar
     },
     data() {
       return {
