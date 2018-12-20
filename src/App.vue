@@ -26,6 +26,7 @@ export default {
     window.addEventListener('keydown', (event)  => {
         this.keyDown(event.key)
     });
+    this.$store.commit('choice')
   },
   methods: {
     keyDown(code) {
