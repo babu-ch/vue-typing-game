@@ -22,6 +22,9 @@ export default new Vuex.Store({
       }
       state.displayString = mondai.displayString
       state.strings = mondai.inputString.split('')
+    },
+    relativeUpdateHealth(state, num) {
+      state.health += num
     }
   }
 })

@@ -9,15 +9,19 @@
     name: 'HealthBar',
     data() {
       return {
-        c: this.$store.state.health,
         style: {
-          width: 0,
+          width: (this.health * 20) + 'px',
         }
       }
     },
+    computed: {
+      health() {
+        return this.$store.state.health
+      }
+    },
     mounted() {
-      const health = this.$store.state.health
-      this.style.width = (health * 20) + 'px'
+      // const health = this.health
+      // this.style.width = (health * 20) + 'px'
     }
 
   }
