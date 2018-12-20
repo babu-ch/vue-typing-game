@@ -31,5 +31,6 @@
         height: 400px;
         border: 1px solid #CCC;
         margin: auto;
+        position: relative;
     }
 </style>

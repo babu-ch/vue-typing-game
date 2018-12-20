@@ -1,12 +1,16 @@
 <template>
     <div :style="style">
-        <span v-for="(char, i) in string" :key="i">{{char}}</span>
+        <fuwa-moji v-for="(char, i) in string" :key="i" :char="char"></fuwa-moji>
     </div>
 </template>
 
 <script>
+  import FuwaMoji from './FuwaMoji'
   export default {
     name: 'DisplayString',
+    components: {
+      FuwaMoji
+    },
     data() {
       return {
         style: {
@@ -27,6 +31,5 @@
         margin-top: 70px;
         text-align: center;
     }
-    span {
-    }
+
 </style>
