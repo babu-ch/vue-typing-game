@@ -14,5 +14,13 @@ export default [
   {displayString:'まほうで動いている', inputString:'mahoudeugoiteiru'},
   {displayString:'転職してラッパーになる', inputString:'tenshokushiterappa-ninaru'},
   {displayString:'単価を上げてください', inputString:'tankawoagetekudasai'},
+  {displayString:'今日もストゼロを飲む', inputString:'kyoumosutozerowonomu'},
+  {displayString:'リーダブルコードよんだかい', inputString:'ri-daburuko-doyondakai'},
+  {displayString:'夏となればまた格別', inputString:'natsutonarebamatakakubetsu'},
+  {displayString:'お寿司がたべたい', inputString:'osushigatabetai'},
+  {displayString:'会いたくて震える', inputString:'aitakutefurueru'},
+  {displayString:'あっさりしたものが食べたい', inputString:'assarishitamonogatabetai'},
+  {displayString:'歳かな', inputString:'toshikana'},
+  {displayString:'マスターにプッシュしよう', inputString:'masuta-nipusshushiyou'},
 ]
 
