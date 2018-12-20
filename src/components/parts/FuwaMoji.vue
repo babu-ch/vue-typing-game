@@ -33,6 +33,7 @@
         animation-duration: 8s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-out;
+        font-size: 40px;
     }
     .fuwa2 {
         animation: fuwa2;
