@@ -8,9 +8,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     health: 10,
-    strings: 'This is Test',
-    currentString: ['t','h','i','s'],
-    displayString: 'ディスイズテスト',
+    strings: [],
+    displayString: '',
     inputStrings: inputStrings,
     inputStringsBase: inputStrings
   },
@@ -22,11 +21,7 @@ export default new Vuex.Store({
         mondai = state.inputStrings.pop()
       }
       state.displayString = mondai.displayString
-      state.currentString = mondai.inputString.split('')
-      console.log(state)
-    },
-    charHit(state) {
-      state.currentString.shift()
+      state.strings = mondai.inputString.split('')
     }
   }
 })
