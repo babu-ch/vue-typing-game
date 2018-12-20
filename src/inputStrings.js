@@ -22,5 +22,11 @@ export default [
   {displayString:'あっさりしたものが食べたい', inputString:'assarishitamonogatabetai'},
   {displayString:'歳かな', inputString:'toshikana'},
   {displayString:'マスターにプッシュしよう', inputString:'masuta-nipusshushiyou'},
+  {displayString:'労働基準法', inputString:'roudoukijunhou'},
+  {displayString:'みなし残業', inputString:'minashizangyou'},
+  {displayString:'ドナドナ', inputString:'donadona'},
+  {displayString:'商流が深い', inputString:'shouryuugafukai'},
+  {displayString:'年金', inputString:'nenkin'},
+  {displayString:'非正規雇用', inputString:'hiseikikoyou'},
 ]
 
