@@ -11,7 +11,7 @@ export default new Vuex.Store({
     strings: [],
     displayString: '',
     inputStrings: inputStrings,
-    inputStringsBase: inputStrings,
+    inputStringsBase: inputStrings.concat(),
     missCount: 0,
     typeSuccessCount: 0,
     successStage: 0,
@@ -38,6 +38,9 @@ export default new Vuex.Store({
     },
     die(state) {
       state.isDied = true
+    },
+    decrementInterval(state, decrement) {
+      state.interval -= decrement
     }
   }
 })

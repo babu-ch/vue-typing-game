@@ -24,6 +24,12 @@
       },
       typeSuccessCount() {
         return this.$store.state.typeSuccessCount
+      },
+      timeInterval() {
+        return this.$store.state.interval
+      },
+      successStage() {
+        return this.$store.state.successStage
       }
     },
     watch: {
@@ -37,6 +43,9 @@
           return
         }
         this.width += 5;
+      },
+      successStage() {
+        this.restart()
       }
     },
     mounted() {
@@ -52,13 +61,15 @@
       },
       restart() {
         this.width = 100
+        clearInterval(this.interval)
         this.start()
       },
       start() {
+        console.log(this.$store.state.interval)
         this.interval = setInterval(() => {
           this.width--
           this.checkTimeOver()
-        }, this.$store.state.interval);
+        }, this.timeInterval);
       },
     }
   }

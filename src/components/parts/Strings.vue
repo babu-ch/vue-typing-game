@@ -26,7 +26,7 @@
       }
     },
     mounted() {
-      window.addEventListener('keydown', (event)  => {
+      window.addEventListener('keydown', (event) => {
         this.keyDown(event.key)
       });
       this.$store.commit('choice')
@@ -40,8 +40,22 @@
         }
         string.shift()
         this.$store.commit('typeSuccess')
+        // stage cleared
         if (!string[0]) {
-          this.$store.commit('choice')
+          this.stageClear()
+        }
+      },
+      stageClear() {
+        // choice next word
+        this.$store.commit('choice')
+        this.$store.commit('stageSuccess')
+        // n stageごとにtimeが短くなる
+        if (this.$store.state.typeSuccessCount % 3 === 0) {
+          if (this.$store.state.interval < 20) {
+            this.$store.commit('decrementInterval', 1);
+          } else {
+            this.$store.commit('decrementInterval', 10);
+          }
         }
       }
     }
@@ -54,17 +68,22 @@
         margin-top: 20px;
         text-align: center;
     }
+
     span {
         display: inline-block;
     }
+
     .list-leave-active {
         transition: all .5s;
         position: absolute;
     }
+
     .list-enter-active {
         transition: all .5s;
     }
-    .list-enter, .list-leave-to /* .list-leave-active for below version 2.1.8 */ {
+
+    .list-enter, .list-leave-to /* .list-leave-active for below version 2.1.8 */
+    {
         opacity: 0;
         transform: translateY(100px);
     }
