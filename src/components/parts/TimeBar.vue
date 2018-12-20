@@ -34,6 +34,7 @@
     },
     watch: {
       missCount() {
+        console.log(this.missCount)
         this.width -= 10
         this.checkTimeOver()
       },

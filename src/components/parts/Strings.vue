@@ -13,6 +13,7 @@
       return {
         style: {},
         currentString: [],
+        keyListener: null,
       }
     },
     computed: {
@@ -26,10 +27,15 @@
       }
     },
     mounted() {
-      window.addEventListener('keydown', (event) => {
+      this.keyListener = (event) => {
         this.keyDown(event.key)
-      });
+      }
+      window.addEventListener('keydown', this.keyListener);
       this.$store.commit('choice')
+    },
+    destroyed() {
+      window.removeEventListener('keydown', this.keyListener)
+
     },
     methods: {
       keyDown(code) {
