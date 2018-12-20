@@ -7,16 +7,18 @@
 <script>
 import GameDisplay from './components/GameDisplay'
 import GameEndDisplay from './components/GameEndDisplay'
+import GameStartDisplay from './components/GameStartDisplay'
 
 export default {
   name: 'app',
   components: {
     GameDisplay,
-    GameEndDisplay
+    GameEndDisplay,
+    GameStartDisplay
   },
   data() {
     return {
-      currentComponent: GameDisplay
+      currentComponent: GameStartDisplay
     }
   },
   computed: {
