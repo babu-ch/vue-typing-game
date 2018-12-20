@@ -9,12 +9,14 @@
     name: 'Strings',
     data() {
       return {
-        currentString: this.$store.state.currentString,
         style: {
         }
       }
     },
     computed: {
+      currentString() {
+        return this.$store.state.currentString
+      },
       string() {
         return this.currentString.join('')
       }
@@ -24,7 +26,8 @@
 
 <style scoped lang="scss">
     div {
-        font-size: 60px;
+        font-size: 40px;
         margin-top: 20px;
+        text-align: center;
     }
 </style>

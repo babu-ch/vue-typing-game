@@ -11,15 +11,20 @@
       return {
         style: {
         },
-        string: this.$store.state.displayString
       }
     },
+    computed: {
+      string() {
+        return this.$store.state.displayString
+      }
+    }
   }
 </script>
 
 <style scoped lang="scss">
     div {
-        font-size: 60px;
+        font-size: 50px;
         margin-top: 70px;
+        text-align: center;
     }
 </style>

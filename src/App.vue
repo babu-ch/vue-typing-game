@@ -14,10 +14,12 @@ export default {
   },
   data() {
     return {
-      currentString: this.$store.state.currentString
     }
   },
   computed: {
+    currentString() {
+      return this.$store.state.currentString
+    },
     firstChar() {
       return this.currentString[0]
     }
