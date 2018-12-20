@@ -14,15 +14,12 @@ export default {
   },
   mounted() {
     window.addEventListener('keydown', (event)  => {
-      // If down arrow was pressed...
-      if (event.keyCode == 40) {
-        vm.$broadcast('down-arrow-pressed');
-      }
+        this.keyDown(event.key)
     });
   },
-  methods {
-    keydown(code) {
-
+  methods: {
+    keyDown(code) {
+        console.log(code)
     }
   }
 }
