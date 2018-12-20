@@ -36,6 +36,9 @@ export default {
         return false;
       }
       this.$store.commit('charHit')
+      if (!this.firstChar) {
+        this.$store.commit('choice')
+      }
     }
   }
 }
