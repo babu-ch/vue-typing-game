@@ -3,7 +3,7 @@ export default [
   {displayString:'邪銀三郎', inputString:'yokoshimaginzaburou'},
   {displayString:'Release', inputString:'release'},
   {displayString:'FAIL HARDER', inputString:'failharder'},
-  {displayString:'なかちサミュエル', inputString:'nakachisamuel'},
+  {displayString:'サミュエル', inputString:'samuel'},
   {displayString:'労働組合', inputString:'roudoukumiai'},
   {displayString:'テストしたい', inputString:'testshitai'},
   {displayString:'たびに出よう', inputString:'tabinideyou'},
