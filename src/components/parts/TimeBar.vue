@@ -34,16 +34,16 @@
     },
     watch: {
       missCount() {
-        console.log(this.missCount)
-        this.width -= 10
+        this.width -= 7
         this.checkTimeOver()
       },
       typeSuccessCount() {
-        if (99 < this.width + 5) {
+        const healPoint = 7
+        if (99 < this.width + healPoint) {
           this.width = 100
           return
         }
-        this.width += 5;
+        this.width += healPoint;
       },
       successStage() {
         this.restart()
@@ -78,9 +78,13 @@
 
 <style scoped lang="scss">
     div {
-        margin: 10px;
-        height: 20px;
-        background: blue;
-        color: white;
+        margin: 10px 0;
+        height: 25px;
+        line-height: 25px;
+        background: black;
+        color: #aaaaaa;
+        opacity: 0.7;
+        overflow: hidden;
+
     }
 </style>
