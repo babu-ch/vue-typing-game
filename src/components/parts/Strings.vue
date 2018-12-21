@@ -1,5 +1,5 @@
 <template>
-    <div :style="style" @click="currentString.pop()">
+    <div :style="style">
         <transition-group name="list" tag="p">
             <span v-for="(char) in currentString" :key="char">{{char}}</span>
         </transition-group>
