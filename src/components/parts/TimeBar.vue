@@ -78,7 +78,7 @@
 
 <style scoped lang="scss">
     div {
-        margin: 10px 0;
+        margin: 20px 0;
         height: 25px;
         line-height: 25px;
         background: black;
