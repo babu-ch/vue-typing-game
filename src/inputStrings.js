@@ -39,6 +39,6 @@ export default [
   {displayString:'サーバー強化で耐えよう', inputString:'sa-ba-kyoukadetaeyou'},
   {displayString:'本番で動かしてみよう', inputString:'honbandeugokashitemiyou'},
   {displayString:'Noticeくらいなら平気', inputString:'noticekurainaraheiki'},
-  {displayString:'名刺はないです', inputString:'meishohanaidesu'},
+  {displayString:'名刺はないです', inputString:'meishihanaidesu'},
 ]
 
