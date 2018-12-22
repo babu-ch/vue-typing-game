@@ -35,5 +35,10 @@ export default [
   {displayString:'全休でお願いします', inputString:'zenkyuudeonegaishimasu'},
   {displayString:'なんで動いてるんだろう', inputString:'nandeugoiterundarou'},
   {displayString:'例外は握り潰せ', inputString:'reigaihanigiritsubuse'},
+  {displayString:'TRUNCATEしてみよう', inputString:'truncateshitemiyou'},
+  {displayString:'サーバー強化で耐えよう', inputString:'sa-ba-kyoukadetaeyou'},
+  {displayString:'本番で動かしてみよう', inputString:'honbandeugokashitemiyou'},
+  {displayString:'Noticeくらいなら平気', inputString:'noticekurainaraheiki'},
+  {displayString:'名刺はないです', inputString:'meishohanaidesu'},
 ]
 
